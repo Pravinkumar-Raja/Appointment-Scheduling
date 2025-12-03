@@ -1,0 +1,5 @@
+<html>
+	<body>
+		<form action="./confirm" method="post">
+			Enter PatientName: <input type="text" name="patientName" placeholder="Enter your name"/><br><br>
+			

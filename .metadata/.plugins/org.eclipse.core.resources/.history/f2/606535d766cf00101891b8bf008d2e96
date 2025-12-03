@@ -1,0 +1,45 @@
+package com.example.demo.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
+
+import com.example.demo.bean.AppointmentBean;
+import com.example.demo.service.Appointment1Service;
+
+@RestController
+@RequestMapping("/appoint")
+public class AppointementController {
+@Autowired
+private Appointment1Service as;
+@GetMapping("/book")
+public ModelAndView book()
+{
+	return new ModelAndView("Appoint");
+}
+@GetMapping("/test")
+
+public ModelAndView mt1() {
+	return new ModelAndView("Test");
+}
+@PostMapping("/confirm")
+public String confirmation(@ModelAttribute("ab")AppointmentBean ab)
+{
+	as.appointmentBook(ab);
+	return "<h1> Appointment Booked Successfully</h1>";
+}
+@GetMapping("/cancel")
+public ModelAndView cancelAppointment()
+{
+	return new ModelAndView("Cancel");
+}
+@GetMapping("/data")
+public String meth()
+{
+	return "<h1>This is Appointment Page</h1>";
+}
+}

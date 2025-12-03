@@ -1,0 +1,59 @@
+package com.example.demo.bean;
+
+import java.util.Date;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name="appointment")
+public class AppointmentBean {
+
+@Id
+@GeneratedValue
+private int appointmentId;
+@Column
+private int doctorId;
+@Column
+private int patientId;
+@Column
+private Date appointmentDate;
+@Column 
+private String appointmentTime;
+public int getAppointmentId() {
+	return appointmentId;
+}
+public void setAppointmentId(int appointmentId) {
+	this.appointmentId = appointmentId;
+}
+public int getDoctorId() {
+	return doctorId;
+}
+public void setDoctorId(int doctorId) {
+	this.doctorId = doctorId;
+}
+public int getPatientId() {
+	return patientId;
+}
+public void setPatientId(int patientId) {
+	this.patientId = patientId;
+}
+public Date getAppointmentDate() {
+	return appointmentDate;
+}
+public void setAppointmentDate(Date appointmentDate) {
+	this.appointmentDate = appointmentDate;
+}
+public String getAppointmentTime() {
+	return appointmentTime;
+}
+public void setAppointmentTime(String appointmentTime) {
+	this.appointmentTime = appointmentTime;
+}
+@Override
+public String toString() {
+	return "AppointmentBean [appointmentId=" + appointmentId + ", doctorId=" + doctorId + ", patientId=" + patientId
+			+ ", appointmentDate=" + appointmentDate + ", appointmentTime=" + appointmentTime + "]";
+}
+
+
+}

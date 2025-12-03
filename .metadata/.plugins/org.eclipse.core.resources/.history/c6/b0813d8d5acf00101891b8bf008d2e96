@@ -1,0 +1,20 @@
+<html>
+	<body>
+		<form action="./confirm" method="post">
+			
+			Enter PatientName: <input type="text" name="patientName" placeholder="Enter your name"/><br><br>
+			Selelct Ailment: <select name="ailmentType">
+				<option value="">----Select(if you know)-----</option>
+				<option value="cardiology">Cardiology</option>
+				<option value="Dermatology">Dermatology</option>
+				<option value="Pediatrics">Pediatric</option>
+				<option value="Orthopedics">Orthopedics</option>
+			</select><br>
+			Enter Ailment Reason: 
+			Enter Appointment Date: <input type="date" name="appointmentDate"/><br><br>
+			Enter Appointment Time: <input type="text" name="appointmentTime"/><br><br>
+			<button type="submit">Confirm</button>
+		</form>
+	</body>
+</html>	
+			

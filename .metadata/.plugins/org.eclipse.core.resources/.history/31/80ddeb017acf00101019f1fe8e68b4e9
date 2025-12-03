@@ -1,0 +1,24 @@
+package com.example.demo.bean;
+
+import java.util.Date;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name="appointment")
+public class AppointmentBean {
+
+@Id
+@GeneratedValue
+private int appointmentId;
+@Column
+private int doctorId;
+@Column
+private int patientId;
+@Column
+private Date appointmentDate;
+@Column 
+private String appointmentTime;
+
+
+}

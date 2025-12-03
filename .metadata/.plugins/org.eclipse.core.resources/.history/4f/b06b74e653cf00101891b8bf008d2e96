@@ -1,0 +1,22 @@
+package com.example.demo.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
+
+@RestController
+@RequestMapping("/appoint")
+public class AppointementController {
+
+@GetMapping("/book")
+public ModelAndView book()
+{
+	return new ModelAndView("Appoint");
+}
+@GetMapping("/data")
+public String meth()
+{
+	return "<h1>This is Appointment Page</h1>";
+}
+}

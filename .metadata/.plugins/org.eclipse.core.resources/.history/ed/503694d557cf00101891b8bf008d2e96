@@ -1,0 +1,22 @@
+package com.example.demo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.bean.AppointmentBean;
+import com.example.demo.dao.AppointmentDao;
+
+@Service
+public class Appointment1Service {
+
+	@Autowired
+	private AppointmentDao adao;
+public int appointmentBook(AppointmentBean ab)
+{
+	if(ab!=null)
+	{
+		adao.save(ab);
+	}
+
+}
+}
