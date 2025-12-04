@@ -17,6 +17,10 @@ public void appointmentBook(AppointmentBean ab)
 	adao.save(ab);
 
 }
+public void reschedule(AppointmentBean ab)
+{
+	
+}
 public String cancelAppointment(int id)
 {
 	AppointmentBean ab=adao.findById(id).orElseThrow();
